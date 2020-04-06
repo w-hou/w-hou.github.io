@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>何必呢</title>
+    <style>
+        body,
+        ul,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            border: 0;
+        }
+
+        .header {
+            position: relative;
+            width: 100%;
+            height: 78px;
+            background: #000;
+        }
+
+        .nav {
+            width: 1358px;
+            min-width: 1230px;
+            height: 78px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            float: left;
+            margin: 9px 0;
+        }
+
+        .logo a {
+            display: block;
+            width: 167px;
+            height: 60px;
+        }
+
+        .mainbav {
+            float: left;
+            transition: 1s;
+        }
+
+        .mainbav li {
+            float: left;
+            width: 149px;
+            height: 60px;
+            padding-top: 18px;
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .mainbav li a {
+            color: #fff;
+        }
+
+        .mainbav li p {
+            color: #868686;
+            font-size: 12px;
+        }
+
+        .enter {
+            position: relative;
+            float: right;
+            width: 244PX;
+            height: 78px;
+            color: #fff;
+            line-height: 78px;
+        }
+
+        .enter .img {
+            float: left;
+            margin-top: 15px;
+        }
+
+        .enter .tit {
+            float: left;
+            margin-left: 10px;
+        }
+
+        .enter a {
+            color: #fff3d0;
+        }
+
+        .enter .center {
+            display: none;
+            position: absolute;
+            top: 78px;
+            left: -28px;
+            width: 310px;
+            height: 162px;
+            background-color: rgba(0, 0, 0, .7);
+            z-index: 11;
+        }
+
+        .center .txt {
+            width: 254px;
+            height: 98px;
+            padding: 20px 28px 0;
+        }
+
+        .center .txt p {
+            margin: 0;
+            color: rgb(131, 131, 131);
+            font-size: 12px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .center .gr {
+            width: 310px;
+            height: 44px;
+            background-color: #000;
+        }
+
+        .center .gr p {
+            margin: 0;
+            line-height: 44px;
+            text-align: center;
+        }
+
+        .gr p a {
+            display: block;
+            width: 310px;
+            height: 44px;
+            color: #fff;
+        }
+
+        .enter:hover .center {
+            display: block;
+        }
+
+        .icon {
+            float: right;
+        }
+
+        .icon-phone {
+            position: relative;
+            margin: 17px 31px 0 0;
+        }
+
+        .icon-phone .code {
+            display: none;
+            position: absolute;
+            top: 61px;
+            left: -86px;
+            width: 210px;
+            height: 168px;
+            background-color: rgba(0, 0, 0, .7);
+            z-index: 11;
+        }
+
+        .code .ewm {
+            width: 110px;
+            height: 110px;
+            margin: 12px auto 0;
+            border: 5px solid #fff;
+            border-radius: 10px;
+        }
+
+        .code p {
+            color: #CDBE91;
+            font-size: 12px;
+            text-align: center;
+            line-height: 36px;
+        }
+
+        .code i {
+            position: absolute;
+            bottom: -7px;
+            right: -5px;
+        }
+
+        .icon-phone:hover .code {
+            display: block;
+        }
+
+        .icon-search {
+            margin: 17px 12px 0 0;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 78px;
+            left: 0px;
+            width: 100%;
+            padding: 10px 0 32px;
+            background-color: rgba(0, 0, 0, .6);
+            overflow: hidden;
+            z-index: 10;
+
+        }
+
+        .submenu {
+            width: 1358Px;
+            height: 232px;
+            min-width: 1230px;
+            margin: 0 auto;
+        }
+
+        .nva-sub {
+            width: 745px;
+            height: 232px;
+            margin-left: 167px;
+        }
+
+        .nva-sub li {
+            float: left;
+            width: 149px;
+            padding: 0;
+            font-size: 14px;
+            text-align: center;
+            line-height: 29px;
+        }
+
+        .nva-sub li a {
+            display: block;
+            color: #e1e1e1;
+        }
+        .menu li a:hover{
+            color: #DFB96A;
+        }
+
+        .nva-sub a img {
+            margin-right: 4px;
+        }
+
+        .mainbav:hover .menu {
+            display: block;
+        }
+
+        .content {
+            position: relative;
+            width: 100%;
+            max-width: 1920px;
+            min-width: 1240px;
+            height: 990px;
+            background: url("images/bg.jpg") no-repeat center;
+        }
+
+        .main {
+            width: 1000px;
+            height: 595px;
+            margin: 0 auto;
+            padding-top: 395px;
+            background: url("images/bgc.jpg") no-repeat center;
+        }
+
+        .vid {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 1910px;
+            height: 990px;
+            margin-left: -960px;
+            overflow: hidden;
+        }
+
+        .main-text {
+            position: relative;
+            width: 718px;
+            height: 330px;
+            margin: 0 auto;
+            background: url("images/img-slogan.png") no-repeat;
+            z-index: 3;
+        }
+
+        .main-btn {
+            position: relative;
+            width: 100%;
+            margin-top: 38px;
+            z-index: 3;
+        }
+
+        .main-btn li {
+            float: left;
+            width: 245px;
+            height: 80px;
+        }
+
+        .main-btn .btn1 {
+            margin-top: 6px;
+        }
+
+        .main-btn .btn2 {
+            width: 290px;
+            height: 95px;
+            margin: 0 109px;
+        }
+
+        .main-btn .btn3 {
+            margin-top: 6px;
+        }
+
+        .main-btn .btn1:hover {
+            filter: brightness(1.1);
+            transform: translateY(-10px);
+            transition: all 0.5s ease;
+        }
+
+        .main-btn .btn2:hover {
+            filter: brightness(1.1);
+            transform: translateY(-10px);
+            transition: all 0.5s ease;
+        }
+
+        .main-btn .btn3:hover {
+            filter: brightness(1.1);
+            transform: translateY(-10px);
+            transition: all 0.5s ease;
+        }
+
+        .footer {
+            width: 100%;
+            height: 132px;
+            background-color: #000;
+        }
+
+        .box {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 30px 0;
+            color: #6e6e6e;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .box p {
+            line-height: 24px;
+        }
+
+        .box a {
+            color: #6e6e6e;
+        }
+
+        .box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav">
+            <div class="logo">
+                <a href="" title="英雄联盟官网"><img src="images/logo-public.png" height="60" width="167" /></a>
+            </div>
+            <ul class="mainbav">
+                <li><a href="">游戏资料<P>GAME INFO<P></a></li>
+                <li>商城/合作<P>STORE<P>
+                </li>
+                <li>社区互动<P>COMMUNITY<P>
+                </li>
+                <li><a href="">赛事官网<P>ESPORTS<P></a></li>
+                <li>自助系统<P>SYSTEM<P></li>
+                <div class="menu">
+                    <div class="submenu">
+                        <ul class="nva-sub">
+                            <li>
+                                <a href="">游戏下载</a>
+                                <a href="">新手指引</a>
+                                <a href="">资料库</a>
+                                <a href="">
+                                    <img src="images/h.png" alt="">
+                                    云顶之弈
+                                </a>
+                                <a href="">
+                                    <img src="images/n.png" alt="">
+                                    攻略中心
+                                </a>
+                                <a href="">开发者基地</a>
+                                <a href="">海克斯战利品库</a>
+                                <a href="">英雄联盟宇宙</a>
+                            </li>
+                            <li><a href="">点券充值</a>
+                                <a href="">
+                                    <img src="images/h.png" alt="">
+                                    道聚城
+                                </a>
+                                <a href="">周边商城</a>
+                                <a href="">LOL桌游</a>
+                                <a href="">LOL信用卡</a>
+                                <a href="">网吧特权</a>
+                                <a href="">电竞小说</a>
+                            </li>
+                            <li><a href="">官方社区</a>
+                                <a href="">视频中心</a>
+                                <a href="">官方论坛</a>
+                                <a href="">官方微信</a>
+                                <a href="">官方微博</a>
+                                <a href="">玩家创作馆</a>
+                                <a href="">
+                                    <img src="images/n.png" alt="">
+                                    作者入驻计划
+                                </a>
+                                <a href="">玩家服务</a>
+                            </li>
+                            <li><a href="">LPL职业联赛</a>
+                                <a href="">LDL发展联赛</a>
+                                <a href="">季中冠军赛</a>
+                                <a href="">洲际系列赛</a>
+                                <a href="">
+                                    <img src="images/h.png" alt="">
+                                    全球总决赛
+                                </a>
+                                <a href="">全明星赛</a>
+                                <a href="">
+                                    <img src="images/n.png" alt="">
+                                    全国高校联赛
+                                </a>
+                                <a href="">城市英雄争霸赛</a>
+                            </li>
+                            <li>
+                                <a href="">联系客服</a>
+                                <a href="">
+                                    <img src="images/n.png" alt="">
+                                    转区系统
+                                </a>
+                                <a href="">
+                                    <img src="images/h.png" alt="">
+                                    封号查询
+                                </a>
+                                <a href="">体验服下载</a>
+                                <a href="">
+                                    <img src="images/n.png" alt="">
+                                    信誉分系统
+                                </a>
+                                <a href="">服务器状态查询</a>
+                                <a href="">秩序殿堂</a>
+                                <a href="">峡谷之巅</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+            <div class="enter">
+                <div class="img">
+                    <img src="images/default.png" height="48" width="48" />
+                </div>
+                <p class="tit">亲爱的召唤师，欢迎<a href="">登录</a></p>
+                <div class="center">
+                    <div class="txt">
+                        <p>登录并且绑定大区后才可以查看您的具体信息哦(包括战绩、资产、声望）</p>
+                        <p>官网个人信息显示略有延迟，请以游戏数据为准</p>
+                    </div>
+                    <div class="gr">
+                        <p>
+                            <a href="">进入个人中心</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <span class="icon icon-phone">
+                <a href="">
+                    <img src="images/phone.png" height="40" width="40" />
+                </a>
+                <div class="code">
+                    <div class="ewm">
+                        <img src="images/zm-qrcode.jpg" height="110" width="110" />
+                    </div>
+                    <p>扫码下载掌上英雄联盟</p>
+                    <i>
+                        <img src="images/polo.gif" height="50" width="50" />
+                    </i>
+                </div>
+            </span>
+            <span class="icon icon-search">
+                <a href="">
+                    <img src="images/search.png" height="40" width="40" />
+                </a>
+            </span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="main">
+            <div class="vid">
+                <video autoplay="autoplay" loop="loop" muted="1">
+                    <source src="images/video.webm" type="video/webm">
+                    <source src="images/video.mpeg" type="video/mp4">
+                </video>
+            </div>
+            <div class="main-text"></div>
+            <ul class="main-btn">
+                <li class="btn1">
+                    <a href="">
+                        <img src="images/11.png" alt="" width="245" height="80">
+                    </a>
+                </li>
+                <li class="btn2">
+                    <a href="">
+                        <img src="images/22.png" alt="" width="290" height="95">
+                    </a>
+                </li>
+                <li class="btn3">
+                    <a href="">
+                        <img src="images/33.png" alt="" width="245" height="80">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="box">
+            <p>
+                <a href="">腾讯互动娱乐</a> |
+                <a href="">服务条款</a> |
+                <a href="">腾讯游戏隐私保护指引</a> |
+                <a href="">腾讯游戏招聘</a> |
+                <a href="">腾讯游戏客服</a> |
+                <a href="">游戏地图</a> |
+                <a href="">成长守护平台</a> |
+                <a href="">商务合作</a> |
+                <a href="">网站导航</a> |
+            </p>
+            <p>COPYRIGHT © 1998 – 2019 TENCENT. ALL RIGHTS RESERVED.</p>
+            <p><a href="">腾讯公司 版权所有</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
