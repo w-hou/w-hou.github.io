@@ -104,7 +104,7 @@
 ### Loading
 <ul>
     <li>
-        <a href="./作品/loading/百分比加载loading.html" target="_blink">百分比加载</a>
+        <a href="./作品/loading/百分比加载动画.html" target="_blink">百分比加载</a>
     </li>
     <li>
         <a href="./作品/loading/loading.html" target="_blink">loading</a>
