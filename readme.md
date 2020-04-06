@@ -77,6 +77,21 @@
         <a href="./作品/html5/拖拽拼图/拖拽拼图.html" target="_blink">拖拽拼图</a>
     </li>
 </ul>
+### JQuery
+<ul>
+    <li>
+        <a href="./作品/JQuery/横向手风琴效果/2 横向手风琴.html" target="_blink">横向手风琴</a>
+    </li>
+    <li>
+        <a href="./作品/JQuery/图片对比/图片对比.html" target="_blink">图片对比</a>
+    </li>
+    <li>
+        <a href="./作品/JQuery/JQ放大镜/JQ放大镜.html" target="_blink">JQ放大镜</a>
+    </li>
+    <li>
+        <a href="./作品/JQuery/JQ封装轮播图/封装轮播图.html" target="_blink">JQ封装轮播图</a>
+    </li>
+</ul>
 
 
 
