@@ -1,0 +1,57 @@
+<!doctype html><!-- 声明文档类型 html5 -->
+<html lang="en"><!-- 根标签 -->
+    <head><!-- 不可视区域 -->
+	    <meta charset="UTF-8"><!-- 国际编码 万国码 -->
+		<!-- 网页要素 -->
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>何必呢</title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+				background-color: skyblue;
+			}
+			.sheep{
+				width: 162.75px;
+				height: 122px;
+				background-image: url("images/sheep.png");
+				animation: run 1s infinite steps(7),move 8s infinite linear;
+			}
+			@keyframes run{
+				0%{
+					background-position-X: 0%;
+				}
+				100%{
+					background-position-X: 100%;
+				}
+			}
+			@keyframes move{
+				0%{
+					transform: translateX(2100px);
+				}
+				100%{
+					transform: translateX(-300px);
+				}
+			}
+			.sheep:hover{
+				background-position-Y: 100%;
+				animation-play-state: running,paused;
+			}
+			.sheep:nth-of-type(2){
+				animation-delay: 0s,-1s;
+				animation-duration: 1s,9s;
+			}
+			.sheep:nth-of-type(3){
+				animation-duration: 1s,7s;
+			}
+		</style>
+    </head>
+    <body><!-- 可视化区域 -->
+		<div class="sheep"></div>
+		<div class="sheep"></div>
+		<div class="sheep"></div>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html><!-- 声明文档类型 html5 -->
+<html lang="en"><!-- 根标签 -->
+    <head><!-- 不可视区域 -->
+	    <meta charset="UTF-8"><!-- 国际编码 万国码 -->
+		<!-- 网页要素 -->
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>何必呢</title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+				perspective: 400px;
+			}
+			.box{
+				position: relative;
+				width: 200px;
+				height: 200px;
+				margin: 400px auto;
+				transform-style: preserve-3d;
+				transition: 3s;
+			}
+			.face{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 200px;
+				height: 200px;
+				font-size: 46px;
+				text-align: center;
+				line-height: 200px;
+				box-shadow: 0 0 10px 0 red inset;
+				transition: 3s;
+			}
+			.face1{
+				position: absolute;
+				top: 50px;
+				left: 50px;
+				width: 100px;
+				height: 100px;
+				box-shadow: 0 0 10px 0 red inset;
+				transition-duration: 3s;
+			}
+			.top{
+				transform-origin: top center;
+				transform: translateZ(-100px) rotateX(90deg);
+			}
+			.bottom{
+				transform: rotateX(-90deg) translateZ(100px);
+			}
+			.left{
+				transform: rotateY(-90deg) translateZ(100px);
+			}
+			.right{
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			.front{
+				transform:translateZ(100px);
+			}
+			.behind{
+				transform: rotateY(180deg) translateZ(100px);
+			}
+			.top1{
+				transform: rotateX(90deg) translateZ(50px);
+				background: url("images/1.png") no-repeat center;
+			}
+			.bottom1{
+				transform: rotateX(-90deg) translateZ(50px);
+				background: url("images/2.png") no-repeat center;
+			}
+			.left1{
+				transform: rotateY(-90deg) translateZ(50px);
+				background: url("images/3.png") no-repeat center;
+			}
+			.right1{
+				transform: rotateY(90deg) translateZ(50px);
+				background: url("images/4.png") no-repeat center;
+			}
+			.front1{
+				transform: translateZ(50px);
+				background: url("images/5.png") no-repeat center;
+			}
+			.behind1{
+				transform: rotateY(180deg) translateZ(50px);
+				background: url("images/6.png") no-repeat center;
+			}
+			.box:hover{
+				transform: rotateY(360deg);
+			}
+			.box:hover .face1{
+				top: -150px;
+			}
+			.box:hover .top{
+				transform: translateZ(-100px) rotateX(210deg);
+			}
+		</style>
+    </head>
+    <body><!-- 可视化区域 -->
+		<div class="box">
+			<div class="face top">上</div>
+			<div class="face bottom">下</div>
+			<div class="face left">左</div>
+			<div class="face right">右</div>
+			<div class="face front">前</div>
+			<div class="face behind">后</div>
+			<div class="face1 top1"></div>
+			<div class="face1 bottom1"></div>
+			<div class="face1 left1"></div>
+			<div class="face1 right1"></div>
+			<div class="face1 front1"></div>
+			<div class="face1 behind1"></div>
+		</div>
+    </body>
+</html>

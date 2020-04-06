@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>何必呢</title>
+    <style>
+        canvas {
+            display: block;
+            margin: auto;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="500" height="500px"></canvas>
+
+    <script>
+        var canvas = document.querySelector("canvas");
+        var context = canvas.getContext("2d");
+
+        // 左手
+        context.beginPath();
+        context.moveTo(100, 160);
+        context.lineTo(100, 280);
+        context.strokeStyle = "green";
+        context.lineWidth = "40";
+        context.lineCap = "round";
+        context.stroke();
+
+        // 头
+        context.beginPath();
+        context.fillStyle = "green";
+        context.arc(230, 140, 100, 0, Math.PI, true);
+        context.fill();
+
+        // 左眼睛
+        context.beginPath();
+        context.fillStyle = "#fff";
+        context.arc(180, 100, 10, 0, Math.PI * 2);
+        context.fill();
+
+        // 右眼睛
+        context.beginPath();
+        context.fillStyle = "#fff";
+        context.arc(280, 100, 10, 0, Math.PI * 2);
+        context.fill();
+
+        // 左天线
+        context.beginPath();
+        context.moveTo(170, 60);
+        context.lineTo(140, 10);
+        context.lineWidth = "5"
+        context.stroke();
+
+        // 右天线
+        context.beginPath();
+        context.moveTo(290, 60);
+        context.lineTo(320, 10);
+        context.lineWidth = "5"
+        context.stroke();
+
+        // 右手
+        context.beginPath();
+        context.moveTo(360, 160);
+        context.lineTo(360, 280);
+        context.strokeStyle = "green";
+        context.lineWidth = "40";
+        context.lineCap = "round";
+        context.stroke();
+
+        // 左脚
+        context.beginPath();
+        context.moveTo(180, 330);
+        context.lineTo(180, 430);
+        context.strokeStyle = "green";
+        context.lineWidth = "40";
+        context.lineCap = "round";
+        context.stroke();
+
+        // 右脚
+        context.beginPath();
+        context.moveTo(270, 330);
+        context.lineTo(270, 430);
+        context.strokeStyle = "green";
+        context.lineWidth = "40";
+        context.lineCap = "round";
+        context.stroke();
+
+        // 身体
+        context.beginPath();
+        context.fillStyle = 'green';
+
+        context.moveTo(130, 150);
+
+        context.lineTo(330, 150);
+        context.lineTo(330, 300);
+
+        // 右臀
+        context.arcTo(330, 350, 300, 350, 40);
+        context.lineTo(300, 350);
+        // 左臀
+        context.arcTo(130, 350, 130, 30, 40);
+        context.closePath();
+
+        context.fill();
+
+        // 心
+        // context.beginPath();
+        // context.arc(230, 200, 20, 0, Math.PI);
+        // context.strokeStyle = "#fff";
+        // context.stroke();
+    </script>
+</body>
+
+</html>

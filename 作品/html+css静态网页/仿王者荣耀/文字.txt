@@ -1,0 +1,418 @@
+成长守护平台
+腾讯游戏排行榜
+
+
+官网首页
+HOME
+游戏资料
+DATA
+内容中心
+RAIDERS
+赛事中心
+MATCH
+商城/合作
+STORE
+社区互动
+COMMUNITY
+玩家支持
+PLAYER
+
+欢迎登录
+登录后查看游戏战绩
+
+
+版本介绍
+游戏介绍
+英雄资料
+爆料站
+故事站
+游戏壁纸
+
+
+攻略中心
+英雄攻略
+视频中心
+王者视角
+作者入驻
+媒体入驻
+
+
+冠军杯
+KPL
+高校赛
+城市赛
+全民赛
+赛事数据
+
+
+
+荣耀·传承
+王者音乐听
+万千世界
+百态王者
+WiFi特权
+
+王者营地
+手Q部落
+微信圈子
+官方微博
+微信公众号
+手Q订阅号
+同人社区
+星光殿堂
+
+
+成长守护平台
+健康系统
+狄仁杰护卫站
+客服专区
+礼包兑换
+自助服务
+
+
+大桥孙策情侣皮肤
+CP大作战上演
+KPL转会期公示
+克制上官婉儿
+王者春晚花絮
+
+
+全部
+新闻
+公告
+活动
+赛事
+...
+
+1月24日全服建议更新公告
+新的福利已准备好 感受新年第一波甜蜜吧01/23
+1月23日全服不停机更新公告01/22
+向团聚出发！《2019王者耀新春》1月27日全网直播01/22
+关于美术体验优化及性能优化进展公告01/20
+猫狗日记皮肤无法赠送问题说明01/25
+王者出征版本更新常见问题解答(画面明暗度调整、更新相关指引)01/24
+鲁班-星空梦想皮肤局内异常说明01/23
+
+
+英雄介绍
+
+英雄
+局内道具
+召唤师技能
+
+请输入你想要搜索的英雄名
+
+全部
+坦克
+战士
+刺客
+法师
+射手
+辅助
+
+
+
+温馨提示：本游戏适合16岁(含)以上玩家娱乐
+抵制不良游戏
+拒绝盗版游戏
+注意自我保护
+谨防受骗上当
+适度游戏益脑
+沉迷游戏伤身
+合理安排时间
+享受健康生活
+
+《王者荣耀》全部背景故事发生于架空世界“王者大陆”中。相关人物、地理、事件均为艺术创作，并非正史。若因观看王者故事对相关历史人物产生兴趣，建议查阅正史记载。
+
+
+腾讯互动娱乐
+服务条款
+腾讯游戏隐私保护指引
+腾讯游戏招聘
+腾讯游戏客服
+游戏地图
+商务合作
+腾讯网
+网站导航
+
+
+COPYRIGHT © 1998 - 2019 TENCENT. ALL RIGHTS RESERVED.
+
+
+粤网文[2017]6138-1456号|（总）网出证（粤）字第057号
+腾讯公司版权所有
+
+文网游备字[2016]M-CSG 0059 号|新广出审[2017] 6712号|ISBN 978-7-7979-8408-9
+全国文化市场统一举报电话：12318
+
+
+英雄列表
+<ul class="clearfix">
+	<li>
+		<a href="#"><img src="images/515.jpg">嫦娥</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/513.jpg">上官婉儿</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/507.jpg">李信</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/312.jpg">沈梦溪</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/508.jpg">伽罗</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/509.jpg">盾山</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/137.jpg">司马懿</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/510.jpg">孙策</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/125.jpg">元歌</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/504.jpg">米莱狄</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/503.jpg">狂铁</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/197.jpg">弈星</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/502.jpg">裴擒虎</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/176.jpg">杨玉环</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/199.jpg">公孙离</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/501.jpg">明世隐</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/179.jpg">女娲</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/198.jpg">梦奇</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/194.jpg">苏烈</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/195.jpg">百里玄策</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/196.jpg">百里守约</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/193.jpg">铠</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/189.jpg">鬼谷子</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/182.jpg">干将莫邪</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/187.jpg">东皇太一</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/191.jpg">大乔</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/192.jpg">黄忠</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/190.jpg">诸葛亮</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/180.jpg">哪吒</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/186.jpg">太乙真人</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/184.jpg">蔡文姬</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/183.jpg">雅典娜</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/178.jpg">杨戬</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/177.jpg">成吉思汗</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/175.jpg">钟馗</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/174.jpg">虞姬</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/173.jpg">李元芳</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/171.jpg">张飞</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/170.jpg">刘备</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/169.jpg">后羿</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/168.jpg">牛魔</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/167.jpg">孙悟空</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/166.jpg">亚瑟</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/163.jpg">橘右京</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/162.jpg">娜可露露</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/157.jpg">不知火舞</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/156.jpg">张良</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/154.jpg">花木兰</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/153.jpg">兰陵王</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/152.jpg">王昭君</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/150.jpg">韩信</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/149.jpg">刘邦</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/148.jpg">姜子牙</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/146.jpg">露娜</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/144.jpg">程咬金</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/142.jpg">安琪拉</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/141.jpg">貂蝉</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/140.jpg">关羽</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/139.jpg">老夫子</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/136.jpg">武则天</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/135.jpg">项羽</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/134.jpg">达摩</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/133.jpg">狄仁杰</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/132.jpg">马可波罗</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/131.jpg">李白</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/130.jpg">宫本武藏</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/129.jpg">典韦</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/128.jpg">曹操</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/127.jpg">甄姬</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/126.jpg">夏侯惇</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/124.jpg">周瑜</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/123.jpg">吕布</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/121.jpg">芈月</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/120.jpg">白起</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/119.jpg">扁鹊</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/118.jpg">孙膑</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/117.jpg">钟无艳</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/116.jpg">阿轲</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/115.jpg">高渐离</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/114.jpg">刘禅</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/113.jpg">庄周</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/112.jpg">鲁班七号</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/111.jpg">孙尚香</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/110.jpg">嬴政</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/109.jpg">妲己</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/108.jpg">墨子</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/107.jpg">赵云</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/106.jpg">小乔</a>
+	</li>
+	<li>
+		<a href="#"><img src="images/105.jpg">廉颇</a>
+	</li>
+</ul>

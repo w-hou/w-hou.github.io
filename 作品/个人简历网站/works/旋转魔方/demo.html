@@ -1,0 +1,113 @@
+<!doctype html><!-- 声明文档类型 html5 -->
+<html lang="en"><!-- 根标签 -->
+    <head><!-- 不可视区域 -->
+	    <meta charset="UTF-8"><!-- 国际编码 万国码 -->
+		<!-- 网页要素 -->
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>何必呢</title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+				background-color: #000;
+				perspective:800px;
+			}
+			.box{
+				position: relative;
+				width: 400px;
+				height: 400px;
+				margin: 300px auto;
+				text-align: center;
+				line-height: 400px;
+				transform-style:preserve-3d;/* 让子级元素  在 3D空间占据位置 */
+				transition: 3s;
+			}
+			.box h2{
+				color: #fe6500;
+				font-size: 64px;
+				text-shadow: 3px 0 3px 0 #fb2700;
+				transition: 3s;
+			}
+			.face{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 400px;
+				height: 400px;
+				font-size: 30px;
+				font-weight: bold;
+				background-image: repeating-linear-gradient(rgba(255,0,0,.2) 0%,rgba(255,0,0,.2) 1%,transparent 1%,transparent 11%),
+				repeating-linear-gradient(90deg,rgba(255,0,0,.2) 0%,rgba(255,0,0,.2) 1%,transparent 1%,transparent 11%);
+				transition: 3s;
+			}
+			.top{
+				color: #71fc69;
+				transform: rotateX(90deg) translateZ(200px);
+			}
+			.bottom{
+				color: #71fc69;
+				transform: rotateX(-90deg) translateZ(200px);
+			}
+			.left{
+				color: skyblue;
+				transform: rotateY(-90deg) translateZ(200px);
+			}
+			.right{
+				color: skyblue;
+				transform: rotateY(90deg) translateZ(200px);
+			}
+			.front{
+				color: pink;
+				transform: translateZ(200px);
+			}
+			.behind{
+				color: pink;
+				transform: rotateY(180deg) translateZ(200px);
+			}
+			.box:hover{
+				transform: rotateY(360deg) rotateX(360deg);
+			}
+			.box:hover h2{
+				background-color: #fe5b11;
+			}
+			.box:hover .top{
+				background-color: #71fc69;
+				box-shadow: 0 0 50px 0 #71fc69;
+			}
+			.box:hover .bottom{
+				background-color: #71fc69;
+				box-shadow: 0 0 50px 0 #71fc69;
+			}
+			.box:hover .left{
+				background-color: skyblue;
+				box-shadow: 0 0 50px 0 skyblue;
+			}
+			.box:hover .right{
+				background-color: skyblue;
+				box-shadow: 0 0 50px 0 skyblue;
+			}
+			.box:hover .front{
+				background-color: pink;
+				box-shadow: 0 0 50px 0 pink;
+			}
+			.box:hover .behind{
+				background-color: pink;
+				box-shadow: 0 0 50px 0 pink;
+			}
+		</style>
+    </head>
+    <body><!-- 可视化区域 -->
+		<div class="box">
+			<h2>么么哒！！！</h2>
+			<div class="face top">top</div>
+			<div class="face bottom">bottom</div>
+			<div class="face left">left</div>
+			<div class="face right">right</div>
+			<div class="face front">front</div>
+			<div class="face behind">behind</div>
+		</div>
+    </body>
+</html>

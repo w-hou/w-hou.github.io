@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>何必呢</title>
+    <script src="js/animation.js"></script>
+    <style>
+        body,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        input {
+            border: none;
+            outline: none;
+        }
+
+        .box {
+            position: relative;
+            width: 1000px;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        .box .bg {
+            height: 450px;
+            background: url("images/bg.jpg") no-repeat center/cover;
+        }
+
+        .box .bg .danmu {
+            position: absolute;
+            left: 1000px;
+            top: 0;
+            color: #f00;
+            white-space: nowrap;
+        }
+
+        .box .foot {
+            position: relative;
+            height: 30px;
+            padding: 10px 20px;
+            font-size: 0;
+            border: 1px solid #eee;
+        }
+
+        .box .foot [type="text"] {
+            width: 895px;
+            height: 26px;
+            text-indent: 1em;
+            font-size: 12px;
+            background-color: #f4f4f4;
+            border: 1px solid #e7e7e7;
+        }
+
+        .box .foot [type="button"] {
+            float: right;
+            width: 60px;
+            height: 30px;
+            color: #fff;
+            background-color: #00A1D6;
+            cursor: pointer;
+        }
+
+        .box .foot [type="button"]:hover {
+            background: #00b5e5;
+            box-shadow: 0 0 1px 1px #00b5e5;
+        }
+
+        .box .foot .face {
+            position: absolute;
+            height: 20px;
+            top: 50%;
+            right: 90px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .box .foot .panel {
+            display: none;
+            position: absolute;
+            width: 390px;
+            padding: 2px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            right: 0;
+            bottom: 40px;
+        }
+
+        .box .foot .panel .list li {
+            float: left;
+            margin-right: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="bg">
+            <!-- <video src="images/1.mp4" width="1000" height="100%" controls="controls" autoplay="autoplay"></video> -->
+        </div>
+        <div class="foot">
+            <input type="text" placeholder="发个弹幕见证当下">
+            <div class="panel"></div>
+            <img src="images/biaoqing.png" alt="" class="face">
+            <input type="button" value="发送">
+        </div>
+    </div>
+
+    <script>
+        // 获取对象
+        var bg = document.querySelector(".bg");
+        var text = document.querySelector(".foot [type='text']");
+        var btn = document.querySelector(".foot [type='button']");
+        btn.onclick = function () {
+            danMu();
+        }
+        text.onkeyup = function (e) {
+            if (e.keyCode == 13) {
+                danMu();
+            }
+        }
+        // 封装一个弹幕函数
+        function danMu() {
+            if (text.value == "") {
+                alert("请输入弹幕内容");
+                return;
+            }
+            // 添加节点span
+            var span = document.createElement("span");
+            span.innerHTML = replaceStr(text.value);
+            // 设置类名
+            span.className = "danmu";
+            // 把span元素添加到bg中
+            bg.appendChild(span);
+            // 随机出现上下位置
+            var top = Math.floor(Math.random() * (bg.offsetHeight - span.offsetHeight + 1));
+            span.style.top = top + "px";
+            // 调用动画   往左侧慢慢移动
+            animation_linear(span, -span.offsetWidth, function () {
+                span.parentNode.removeChild(span);
+            });
+            text.value = "";
+        }
+
+        // 表情
+        // 获取表情对象
+        var face = document.querySelector(".foot .face");
+        var panel = document.querySelector(".foot .panel");
+        face.onclick = function () {
+            if (panel.style.display == "none") {
+                panel.style.display = "block"
+            } else {
+                panel.style.display = "none"
+            }
+            var str = "<ul class='list'>";
+            for (var i = 1; i <= 75; i++) {
+                str += '<li><img src="images/' + i + '.gif"></li>';
+            }
+            str += "</ul>"
+            panel.innerHTML = str;
+            var list = document.querySelector(".list");
+            // console.log(list);
+            list.onclick = function (e) {
+                var arr = e.target.src.split("/");
+                var file = arr[arr.length - 1].split(".");
+                var index = file[0];
+                var face_str = "[em_" + index + "]";
+                text.value += face_str;
+                panel.style.display = "none";
+            }
+        }
+        function replaceStr(str) {
+            // str.replace("想被替换的字符串或者正则表达式","替换成什么字符串");
+            return str.replace(/\[em_([0-9]*)\]/g, '<img src="images/$1.gif"/>');
+        }
+    </script>
+</body>
+
+</html>

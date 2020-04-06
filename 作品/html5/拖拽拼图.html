@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>何必呢</title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+
+        .game-box {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 600px;
+            height: 600px;
+            margin: auto;
+            padding: 1px;
+            border: 2px solid #e4393c;
+        }
+
+        .game {
+            position: relative;
+            height: 100%;
+        }
+
+        .game div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            padding: 1px;
+            box-sizing: border-box;
+            background: url("images/pic.jpg") no-repeat 0/600px;
+            background-clip: content-box;
+            transition: .5s;
+        }
+
+        .game .a1 {
+            left: 0;
+            top: 0;
+            background-position: 0px 0px;
+        }
+
+        .game .a2 {
+            left: 200px;
+            top: 0;
+            background-position: -200px 0px;
+        }
+
+        .game .a3 {
+            left: 400px;
+            top: 0;
+            background-position: -400px 0px;
+        }
+
+        .game .a4 {
+            left: 0;
+            top: 200px;
+            background-position: 0 -200px;
+        }
+
+        .game .a5 {
+            left: 200px;
+            top: 200px;
+            background-position: -200px -200px;
+        }
+
+        .game .a6 {
+            left: 400px;
+            top: 200px;
+            background-position: -400px -200px;
+        }
+
+        .game .a7 {
+            left: 0;
+            top: 400px;
+            background-position: 0 -400px;
+        }
+
+        .game .a8 {
+            left: 200px;
+            top: 400px;
+            background-position: -200px -400px;
+        }
+
+        .game .a9 {
+            left: 400px;
+            top: 400px;
+            background-position: -400px -400px;
+        }
+
+        .move {
+            box-shadow: 0 0 20px 5px #e4393c;
+        }
+
+        /* .game div span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 1px;
+            box-sizing: border-box;
+            background: url("images/pic.jpg") no-repeat 0/600px;
+            background-clip: content-box;
+        }
+
+        .game .a1 span {
+            background-position: 0px 0px;
+
+        }
+
+        .game .a2 span {
+            background-position: -200px 0px;
+        }
+
+        .game .a3 span {
+            background-position: -400px 0px;
+        }
+
+        .game .a4 span {
+            background-position: 0 -200px;
+        }
+
+        .game .a5 span {
+            background-position: -200px -200px;
+        }
+
+        .game .a6 span {
+            background-position: -400px -200px;
+        }
+
+        .game .a7 span {
+            background-position: 0 -400px;
+        }
+
+        .game .a8 span {
+            background-position: -200px -400px;
+        }
+
+        .game .a9 span {
+            background-position: -400px -400px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="game-box">
+        <div class="game">
+            <div class="a1"></div>
+            <div class="a2"></div>
+            <div class="a3"></div>
+            <div class="a4"></div>
+            <div class="a5"></div>
+            <div class="a6"></div>
+            <div class="a7"></div>
+            <div class="a8"></div>
+            <div class="a9"></div>
+
+            <!-- <div class="a1"><span>1</span></div>
+            <div class="a2"><span>2</span></div>
+            <div class="a3"><span>3</span></div>
+            <div class="a4"><span>4</span></div>
+            <div class="a5"><span>5</span></div>
+            <div class="a6"><span>6</span></div>
+            <div class="a7"><span>7</span></div>
+            <div class="a8"><span>8</span></div>
+            <div class="a9"><span>9</span></div> -->
+        </div>
+    </div>
+
+    <script>
+        // var span = document.querySelectorAll("span");
+        var box = document.querySelectorAll(".game>div");
+
+        var _this;
+
+        for (var i = 0; i < box.length; i++) {
+            //     var index = i;
+            //     // 设置可以拖动
+            box[i].draggable = true;
+
+            box[i].ondragstart = function (e) {
+                _this = this;
+            }
+
+            box[i].ondragover = function (e) {
+                // 阻止默认行为
+                e.preventDefault();
+                this.classList.add("move");
+            }
+
+            box[i].ondragleave = function(){
+                this.classList.remove("move");
+            }
+
+            box[i].ondrop = function (e) {
+
+                // _this.parentNode.style.left = this.offsetLeft + "px";
+                // _this.parentNode.style.top = this.offsetTop + "px";
+                // this.style.left = _this.parentNode.offsetLeft + "px";
+                // this.style.top = _this.parentNode.offsetTop + "px";
+
+                this.style.left = _this.offsetLeft + "px";
+                this.style.top = _this.offsetTop + "px";
+
+                _this.style.left = this.offsetLeft + "px";
+                _this.style.top = this.offsetTop + "px";
+
+                this.classList.remove("move");
+            }
+        }
+    </script>
+</body>
+
+</html>
