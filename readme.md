@@ -87,7 +87,7 @@
         <a href="./作品/JQuery/图片对比/图片对比.html" target="_blink">图片对比</a>
     </li>
     <li>
-        <a href="./作品/JQuery/JQ放大镜/JQ放大镜.html" target="_blink">JQ放大镜</a>
+        <a href="./作品/JQuery/JQ放大镜/jQ放大镜.html" target="_blink">JQ放大镜</a>
     </li>
     <li>
         <a href="./作品/JQuery/JQ封装轮播图/封装轮播图.html" target="_blink">JQ封装轮播图</a>
