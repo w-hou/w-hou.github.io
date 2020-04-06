@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>何必呢</title>
+    <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="demo.js"></script>
+    <style>
+        .banner1 {
+            width: 300px;
+            height: 150px;
+        }
+        
+        .banner2 {
+            width: 600px;
+            height: 300px;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="swiper-container banner1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/1.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/2.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/3.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/4.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/5.jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <div class="swiper-container banner2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/1.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/2.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/3.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/4.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/5.jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script>
+        // one
+        var banner1 = new Slideshow(".banner1");
+        // 可以添加自动轮播
+        // 可以添加时间, 不传参默认 3000毫秒
+        banner1.autoPlay(2500);
+
+        // two
+        var banner2 = new Slideshow(".banner2");
+        banner2.autoPlay() // 默认3000毫秒
+    </script>
+</body>
+
+</html>

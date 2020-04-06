@@ -1,0 +1,169 @@
+html {
+  height: 100%;
+}
+body,
+ul,
+h2,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  display: flex;
+  height: 100%;
+  perspective: 800px;
+  overflow: hidden;
+}
+.box {
+  display: flex;
+  position: relative;
+  width: 360px;
+  height: 540px;
+  margin: auto;
+  color: #fff;
+  background: url("../images/bg.jpg") no-repeat center / cover;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50% 50px;
+  transition: 1s;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box .mask {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: 1s;
+}
+.box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: 1s;
+}
+.box:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: 1s;
+  background-color: #000;
+  transform: translateZ(-15px);
+  box-shadow: 0 0 10px 2px #000;
+}
+.box ul {
+  display: flex;
+}
+.box ul li {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 20px 10px;
+  background-color: #fff;
+  text-align: right;
+  transform-style: preserve-3d;
+  transform: rotateZ(45deg);
+}
+.box ul li div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0);
+  transform-origin: 0 100%;
+  transition: 1s;
+  opacity: 0;
+}
+.box ul li .right {
+  width: 0;
+  background-color: grey;
+  transform: translateX(20px) rotateY(-90deg);
+}
+.box ul li .front {
+  width: 0;
+  background-color: grey;
+  transform: rotateY(-90deg) rotateX(-90deg) translateY(20px);
+}
+.box ul li .top {
+  background-color: grey;
+  transform: translateZ(0);
+}
+.box h2,
+.box p,
+.box h4,
+.box li {
+  transition: 1s;
+}
+.box.active {
+  transform: rotateX(60deg);
+}
+.box.active:before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.box.active h2,
+.box.active p,
+.box.active h4 {
+  opacity: 0.5;
+  transform: translateZ(20px);
+}
+.box.active li {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateZ(12px) rotateZ(45deg);
+}
+.box.active li div {
+  color: #ffffff;
+  opacity: 1;
+}
+.box.active li:nth-child(1) .right,
+.box.active li:nth-child(1) .front {
+  width: 100px;
+}
+.box.active li:nth-child(1) .top {
+  transform: translateZ(100px);
+}
+.box.active li:nth-child(2) .right,
+.box.active li:nth-child(2) .front {
+  width: 50px;
+}
+.box.active li:nth-child(2) .top {
+  transform: translateZ(50px);
+}
+.box.active li:nth-child(3) .right,
+.box.active li:nth-child(3) .front {
+  width: 150px;
+}
+.box.active li:nth-child(3) .top {
+  transform: translateZ(150px);
+}
+.box.active li:nth-child(4) .right,
+.box.active li:nth-child(4) .front {
+  width: 120px;
+}
+.box.active li:nth-child(4) .top {
+  transform: translateZ(120px);
+}
+.box.active li:nth-child(5) .right,
+.box.active li:nth-child(5) .front {
+  width: 80px;
+}
+.box.active li:nth-child(5) .top {
+  transform: translateZ(80px);
+}
+/*# sourceMappingURL=./index.css.map */

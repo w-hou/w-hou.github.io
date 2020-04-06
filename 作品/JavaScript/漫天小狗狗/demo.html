@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>何必呢</title>
+	<script>
+		
+		var y_top = 0;	
+		var x_right = 0;	
+		var y_bottom = 0;	
+		var x_left = 0;	
+		var min_width = 20;   
+		var max_width = 200;   
+		window.onload=function(){
+			body = document.body;
+			x_right = window.innerWidth - max_width;
+			y_bottom = window.innerHeight - max_width;
+			setInterval("dog()",800);
+		}
+
+
+		function dog(){
+			var img = document.createElement("img");
+			img.src ="images/dog.png";
+			img.style.width = getRandom(min_width,max_width)+"px";
+			img.style.position = "absolute";
+			img.style.left = getRandom(x_left,x_right)+"px";
+			img.style.top = getRandom(y_top,y_bottom)+"px";
+			
+			img.setAttribute("onclick","removeImg(this)");
+			body.appendChild(img);
+		}
+
+		function getRandom(min,max){
+			return Math.floor(Math.random()*(max-min+1)+min);
+		}
+
+		function removeImg(obj){
+			body.removeChild(obj);
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

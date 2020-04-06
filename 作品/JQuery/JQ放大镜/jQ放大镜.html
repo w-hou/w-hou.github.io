@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>何必呢</title>
+    <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+        body,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .wrap {
+            position: relative;
+            width: 1200px;
+            margin: 100px auto;
+        }
+
+        .wrap .small {
+            position: relative;
+            width: 450px;
+            height: 450px;
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+            overflow: hidden;
+        }
+
+        .wrap .small .shade {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 225px;
+            height: 225px;
+            background-color: #fede4f;
+            opacity: .4;
+            border: 1px solid #ddd;
+            cursor: move;
+        }
+
+        .wrap .big {
+            display: none;
+            position: absolute;
+            top: 32px;
+            left: 451px;
+            width: 450px;
+            height: 450px;
+            border: 1px solid #eee;
+            overflow: hidden;
+        }
+
+        .wrap .big li {
+            position: absolute;
+            width: 900px;
+            height: 900px;
+        }
+
+        .wrap .big li img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .wrap .big li:first-child {
+            z-index: 1;
+        }
+
+        .wrap .phone li {
+            float: left;
+            width: 54px;
+            height: 54px;
+            margin: 0 16px;
+            border: 2px solid #fff;
+        }
+
+        .wrap .phone .line {
+            border-color: #e4393c;
+        }
+
+        .wrap .multiple {
+            width: 120px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        .wrap .multiple li {
+            float: left;
+            width: 33px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: #e4393c;
+            cursor: pointer;
+        }
+
+        .wrap .multiple li:nth-child(2) {
+            width: 52px;
+            background-color: #fff;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            cursor: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <ul class="multiple">
+            <li class="minus">－</li>
+            <li class="multiple-num"></li>
+            <li class="add">＋</li>
+        </ul>
+        <div class="small">
+            <ul>
+                <li>
+                    <img src="images/b1.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/b2.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/b3.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/b4.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/b5.jpg" alt="">
+                </li>
+            </ul>
+            <div class="shade"></div>
+        </div>
+        <ul class="phone">
+            <li class="line">
+                <img src="images/a1.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/a2.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/a3.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/a4.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/a5.jpg" alt="">
+            </li>
+        </ul>
+        <div class="big">
+            <ul>
+                <li>
+                    <img src="images/c1.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/c2.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/c3.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/c4.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/c5.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+
+            $(".phone li").click(function () {
+
+                $(this).addClass("line").siblings().removeClass("line");
+
+                $(".small ul li")
+                    .eq($(this).index())
+                    .stop(true, true)
+                    .fadeIn()
+                    .siblings()
+                    .stop(true, true)
+                    .fadeOut();
+
+                $(".big ul li")
+                    .eq($(this).index())
+                    .stop(true, true)
+                    .fadeIn()
+                    .siblings()
+                    .stop(true, true)
+                    .fadeOut();
+
+            })
+
+            var num = 2;
+
+            $(".multiple-num").text(num + " 倍");
+
+            $(".minus").on("click", function () {
+                num == 2 ? num : num--;
+                $(".multiple-num").text(num + " 倍");
+
+                move();
+
+            })
+            $(".add").on("click", function () {
+                num == 4 ? num : num++;
+                $(".multiple-num").text(num + " 倍");
+
+                move();
+
+            })
+            function move() {
+
+                $(".shade").css({
+                    "width": $(".small").width() / num,
+                    "height": $(".small").height() / num
+                });
+
+                $(".big ul li").css({
+                    "width": $(".big").width() * num,
+                    "height": $(".big").height() * num
+                });
+
+
+            }
+
+            $(".small").on("mouseover", function (e) {
+                $(".shade").show();
+                $(".big").show();
+
+                var left = $(".wrap").offset().left;
+                var top = $(".wrap").offset().top;
+
+                $(".small").on("mousemove", function (e) {
+                    // 鼠标在 small 里的 x, y 坐标
+                    var x = e.pageX - left;
+                    var y = e.pageY - top;
+
+                    // 让鼠标在滑块的中心点
+                    var _x = x - $(".shade").width() / 2;
+                    var _y = y - $(".shade").height() / 2;
+                    // console.log(_x);
+                    // console.log(_y);
+
+                    // 判断水平移动超出
+                    // if (_x <= 0) {
+                    //     _x = 0;
+                    // } else if (_x >= $(this).width() - $(".shade").width()) {
+                    //     _x = $(this).width() - $(".shade").width();
+                    // }
+                    _x = _x <= 0 ? 0 : _x;
+                    _x = _x >= $(this).width() - $(".shade").width() ? $(this).width() - $(".shade").width() : _x;
+                    // 判断垂直移动超出
+                    // if (_y <= 0) {
+                    //     _y = 0;
+                    // } else if (_y >= $(this).height() - $(".shade").height()) {
+                    //     _y = $(this).height() - $(".shade").height();
+                    // }
+                    _y = _y <= 0 ? 0 : _y;
+                    _y = _y >= $(this).height() - $(".shade").height() ? _y = $(this).height() - $(".shade").height() : _y;
+
+                    // 设置值
+                    $(".shade").css({
+                        "left": _x + "px",
+                        "top": _y + "px"
+                    })
+
+                    $(".big li").css({
+                        "left": _x * -num,
+                        "top": _y * -num
+                    });
+
+                })
+
+            }).mouseout(function () {
+                // 鼠标移出隐藏
+                $(".shade").hide();
+                $(".big").hide();
+            })
+
+        })
+    </script>
+</body>
+
+</html>

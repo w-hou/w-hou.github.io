@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>何必呢</title>
+  <style>
+    body {
+      margin: 0 auto;
+    }
+
+    .game-box {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 600px;
+      height: 600px;
+      border: 2px solid #e4393c;
+      padding: 1px;
+    }
+
+    .game {
+      height: 100%;
+      position: relative;
+    }
+
+    .game>div {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-image: url("images/bg3.jpg");
+      background-repeat: no-repeat;
+      padding: 1px;
+      box-sizing: border-box;
+      background-clip: content-box;
+      transition: .3s;
+    }
+
+    /* .game>.a1 { */
+    /* left: 0;
+      top: 0;
+      background-position: 0px 0px; */
+    /* } */
+
+    /* .game>.a2 { */
+    /* left: 200px;
+      top: 0;
+      background-position: -200px 0px; */
+    /* } */
+
+    /* .game>.a3 { */
+    /* left: 400px;
+      top: 0;
+      background-position: -400px 0px; */
+    /* } */
+
+    /* .game>.a4 { */
+    /* left: 0;
+      top: 200px;
+      background-position: 0 -200px; */
+    /* } */
+
+    /* .game>.a5 { */
+    /* left: 200px;
+      top: 200px;
+      background-position: -200px -200px; */
+    /* } */
+
+    /* .game>.a6 { */
+    /* left: 400px;
+      top: 200px;
+      background-position: -400px -200px; */
+    /* background-image: none; */
+    /* } */
+
+    /* .game>.a7 { */
+    /* left: 0;
+      top: 400px;
+      background-position: 0 -400px; */
+    /* } */
+
+    /* .game>.a8 { */
+    /* left: 200px;
+      top: 400px;
+      background-position: -200px -400px; */
+    /* } */
+
+    /* .game>.a9 { */
+    /* left: 400px;
+      top: 400px;
+      background-position: -400px -400px; */
+    /* } */
+  </style>
+</head>
+
+<body>
+
+  <div class="game-box">
+    <div id="game" class="game">
+
+    </div>
+  </div>
+
+  <script>
+
+    function Game(selector) {
+      this.passMap = [];
+
+      this.cellCount = 9;
+
+      this.width = 600;
+
+      this.moveMap = [];
+
+      this.selector = selector;
+
+      this.white = null;
+
+    }
+
+    //创建元素
+    Game.prototype.create = function (tagName) {
+      return document.createElement(tagName);
+    }
+
+    //获取元素
+    Game.prototype.query = function (selector) {
+      return document.querySelectorAll(selector);
+    }
+
+    //生成宫格
+    Game.prototype.createCell = function () {
+      var x = 0;
+      var y = -1;
+
+      for (var i = 0; i < this.cellCount; i++) {
+        var div = this.create('div');
+        div.className = 'a' + (i + 1);
+
+        if (i % 3 == 0) {
+          x = 0
+          y++;
+        } else {
+          x++;
+        }
+
+        div.style.backgroundPosition = -200 * x + 'px -' + 200 * y + 'px';
+
+        this.passMap.push(div);
+
+      }
+
+      //随机元素空白背景
+      var index = Math.floor(Math.random() * this.passMap.length);
+      this.white = this.passMap[index];
+      this.white.style.backgroundImage = 'none';
+
+    }
+
+    // 随机数组
+    Game.prototype.randomArray = function () {
+      var map = this.passMap.concat();
+
+
+      for (var i = 0; i < this.passMap.length; i++) {
+
+        //随机生成下标
+        var randomIndex = Math.floor(Math.random() * map.length);
+        console.log('randomIndex ==> ', randomIndex);
+
+        var ele = map.splice(randomIndex, 1)[0];
+
+        this.moveMap.push(ele);
+      }
+
+      console.log('this.moveMap ==> ', this.moveMap);
+    }
+
+    //将宫生成到页面
+    Game.prototype.addCellPage = function () {
+      var x = 0;
+      var y = -1;
+
+      for (var i = 0; i < this.moveMap.length; i++) {
+
+        if (i % 3 == 0) {
+          x = 0
+          y++;
+        } else {
+          x++;
+        }
+
+        //元素的位置
+        this.moveMap[i].style.left = 200 * x + 'px';
+        this.moveMap[i].style.top = 200 * y + 'px';
+
+        this.query(this.selector)[0].appendChild(this.moveMap[i]);
+      }
+
+    }
+
+    //绑定事件
+    Game.prototype.addEvent = function () {
+
+      var self = this;
+
+      for (var i = 0; i < this.passMap.length; i++) {
+        this.passMap[i].onclick = function () {
+          console.log('this ==> ', this);
+
+          if (this === self.white) {
+            console.log('空白元素');
+            return;
+          }
+
+          var moveStyle = getComputedStyle(this);
+          var moveLeft = parseFloat(moveStyle.left);
+          var moveTop = parseFloat(moveStyle.top);
+          console.log('moveLeft ==> ', moveLeft);
+          console.log('moveTop ==> ', moveTop);
+
+          //获取空白元素的位置
+          var whiteStyle = getComputedStyle(self.white);
+          var whiteLeft = parseFloat(whiteStyle.left);
+          var whiteTop = parseFloat(whiteStyle.top);
+          console.log('whiteLeft ==> ', whiteLeft);
+          console.log('whiteTop ==> ', whiteTop);
+
+          //判断元素是否可以移动，如果可以移动，则相互交换位置
+          if (moveTop == whiteTop && (moveLeft - 200 == whiteLeft || moveLeft + 200 == whiteLeft)) {
+            this.style.left = whiteLeft + 'px';
+            self.white.style.left = moveLeft + 'px';
+
+          } else if (moveLeft == whiteLeft && (moveTop - 200 == whiteTop || moveTop + 200 == whiteTop)) {
+            //垂直方向移动
+            this.style.top = whiteTop + 'px';
+            self.white.style.top = moveTop + 'px';
+
+          }
+
+        }
+      }
+    }
+
+
+    //初始化
+    Game.prototype.init = function () {
+      this.createCell();
+
+      this.randomArray();
+
+      this.addCellPage();
+
+      this.addEvent();
+    }
+
+    window.onload = function () {
+
+      var game = new Game('#game');
+      game.init();
+
+    }
+  </script>
+</body>
+
+</html>
