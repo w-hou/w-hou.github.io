@@ -111,21 +111,12 @@
     </li>
 </ul>
 
-<<<<<<< HEAD
 <!-- ### Vue项目 -->
 <!-- <ul>
     <li>
         <a href="./作品/vue项目/coffee/dist/index.html" target="_blink">咖啡商城</a>
     </li>
 </ul> -->
-=======
-### Vue项目
-<ul>
-    <li>
-        <a href="./作品/vue项目/coffee/dist/index.html" target="_blink">咖啡商城</a>
-    </li>
-</ul>
->>>>>>> b68352072f2671cdc1f8c2f361409dbe8483d8d3
 
 
 
