@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品展示</title>
+    <style>
+        body,
+        ul,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        body {
+            background-color: #ccc;
+        }
+
+        /* 版心类 */
+        .w {
+            width: 1200px;
+            margin: auto;
+        }
+
+        /* .auto-img{
+            width: 100%;
+            height: 100%;
+        } */
+
+        .title {
+            color: #e8e8e8;
+            text-align: center;
+            font-family: "仿宋";
+            font-size: 36px;
+            text-shadow: 0 2px 5px red;
+            letter-spacing: 4px;
+        }
+
+        .production {
+            margin-top: 4em;
+        }
+
+        .production-title {
+            text-align: center;
+            letter-spacing: 4px;
+        }
+
+        .column {
+            display: flex;
+            padding: 2em 0;
+            box-shadow: inset 0 -15px 15px -22px #000;
+            border-radius: 10px;
+            justify-content: space-around;
+        }
+
+        .column li {
+            width: 160px;
+            height: 230px;
+            /* margin: 0 40px; */
+            /* background-color: #fff; */
+            border-radius: 5px;
+            box-shadow: 1px 1px 10px -5px #000;
+            transition: .5s;
+        }
+
+        /* .column li img {
+            width: 100%;
+            height: 100%;
+        } */
+
+        .column li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #f0f0f0;
+            background-color: rgba(0, 0, 0, .5);
+            border-radius: 5px;
+            font-size: 15px;
+            text-align: center;
+            line-height: 230px;
+            text-decoration: none;
+            opacity: 0;
+            transition: .5s;
+        }
+
+        .column li:hover {
+            box-shadow: 3px 3px 15px -5px #000;
+            transform: translateY(-2%);
+        }
+
+        .column li:hover a {
+            opacity: 1;
+        }
+
+        .mls{
+            background: url("images/mls.png") no-repeat center/cover;
+        }
+
+        .tlbb{
+            background: url("images/tlbb.png") no-repeat center/cover;
+        }
+
+        .wzry{
+            background: url("images/wzry.png") no-repeat center/cover;
+        }
+
+        .xczx{
+            background: url("images/xczx.png") no-repeat center/cover;
+        }
+
+        .yxlm{
+            background: url("images/yxlm.jpg") no-repeat center/cover;
+        }
+
+        .dm{
+            background: url("images/dm.png") no-repeat center/cover;
+        }
+
+        .magnify{
+            background: url("images/magnify.png") no-repeat center/cover;
+        }
+
+        .pt{
+            background: url("images/pt.png") no-repeat center/cover;
+        }
+
+        .banner{
+            background: url("images/banner.png") no-repeat center/cover;
+        }
+
+        .dog{
+            background: url("images/dog.png") no-repeat center/cover;
+        }
+
+        .boot{
+            background: url("images/boot.png") no-repeat center/cover;
+        }
+
+        .t-pt{
+            background: url("images/t-pt.png") no-repeat center/cover;
+        }
+
+        .robot{
+            background: url("images/robot.png") no-repeat center/cover;
+        }
+
+        .mf{
+            background: url("images/mf.png") no-repeat center/cover;
+        }
+
+        .f-box{
+            background: url("images/box.png") no-repeat center/cover;
+        }
+
+        .card{
+            background: url("images/card.png") no-repeat center/cover;
+        }
+
+        .sheep{
+            background: url("images/sheep.png") no-repeat center/cover;
+        }
+
+        .tj{
+            background: url("images/tj.png") no-repeat center/cover;
+        }
+
+        .sfq{
+            background: url("images/sfq.png") no-repeat center/cover;
+        }
+
+        .compare{
+            background: url("images/compare.png") no-repeat center/cover;
+        }
+
+        .JQ-magnify{
+            background: url("images/JQ-magnify.png") no-repeat center/cover;
+        }
+
+        .JQ-banner{
+            background: url("images/JQ-banner.png") no-repeat center/cover;
+        }
+
+        .percent{
+            background: url("images/percent.png") no-repeat center/cover;
+        }
+
+        .loading{
+            background: url("images/loading.png") no-repeat center/cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box w">
+        <h1 class="title">项目展示</h1>
+
+        <div class="production">
+            <h3 class="production-title">html+css静态网页</h3>
+            <ul class="column">
+                <li class="tlbb">
+                    <a href="./works/html+css/仿天龙八部官网/demo.html" target="_blink">仿天龙八部官网</a>
+                </li>
+                <li class="mls">
+                    <a href="./works/html+css/仿美丽说/demo.html" target="_blink">仿美丽说官网</a>
+                </li>
+                <li class="wzry">
+                    <a href="./works/html+css/仿王者荣耀/index.html" target="_blink">仿王者荣耀官网</a>
+                </li>
+                <li class="xczx">
+                    <a href="./works/html+css/仿学成在线/demo.html" target="_blink">仿学成在线官网</a>
+                </li>
+                <li class="yxlm">
+                    <a href="./works/html+css/仿英雄联盟首页/demo.html" target="_blink">仿英雄联盟首页</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="production">
+            <h3 class="production-title">JavaScript</h3>
+            <ul class="column">
+                <li class="dm">
+                    <a href="./works/JavaScript/弹幕墙/index.html" target="_blink">弹幕墙</a>
+                </li>
+                <li class="magnify">
+                    <a href="./works/JavaScript/放大镜/京东放大镜.html" target="_blink">放大镜</a>
+                </li>
+                <li class="pt">
+                    <a href="./works/JavaScript/九宫格拼图/九宫格拼图.html" target="_blink">九宫格拼图</a>
+                </li>
+                <li class="banner">
+                    <a href="./works/JavaScript/轮播图/轮播图.html" target="_blink">轮播图</a>
+                </li>
+                <li class="dog">
+                    <a href="./works/JavaScript/漫天小狗/demo.html" target="_blink">漫天小狗</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="production">
+            <h3 class="production-title">bootstrap</h3>
+            <ul class="column">
+                <li class="boot">
+                    <a href="./works/bootstrap响应式/index.html" target="_blink">bootstrap响应式</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="production">
+            <h3 class="production-title">html5</h3>
+            <ul class="column">
+                <li class="t-pt">
+                    <a href="./works/html5/拖拽拼图/拖拽拼图.html" target="_blink">拖拽拼图</a>
+                </li>
+                <li class="robot">
+                    <a href="./works/html5/canvas安卓机器人/安卓机器人.html" target="_blink">canvas安卓机器人</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="production">
+            <h3 class="production-title">loading</h3>
+            <ul class="column">
+                <li class="percent">
+                    <a href="./works/loading/百分比加载动画.html" target="_blink">百分比加载动画</a>
+                </li>
+                <li class="loading">
+                    <a href="./works/loading/loading.html" target="_blink">loading...</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="production">
+            <h3 class="production-title">css3</h3>
+            <ul class="column">
+                <li class="mf">
+                    <a href="./works/css3/01-旋转魔方/demo.html" target="_blink">旋转魔方</a>
+                </li>
+                <li class="f-box">
+                    <a href="./works/css3/02-3D翻盖盒子/index.html" target="_blink">3D翻盖</a>
+                </li>
+                <li class="card">
+                    <a href="./works/css3//03-翻转卡片/卡片.html" target="_blink">翻转卡片</a>
+                </li>
+                <li class="sheep">
+                    <a href="./works/css3/04-奔跑的小绵羊/小绵羊.html" target="_blink">奔跑的小绵羊</a>
+                </li>
+                <li class="tj">
+                    <a href="./works/css3/05-立体柱形图/index.html" target="_blink">立体柱形图</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="production">
+            <h3 class="production-title">JQuery</h3>
+            <ul class="column">
+                <li class="sfq">
+                    <a href="./works/JQuery/横向手风琴效果/横向手风琴.html" target="_blink">横向手风琴</a>
+                </li>
+                <li class="compare">
+                    <a href="./works/JQuery/图片对比/图片对比.html" target="_blink">图片对比</a>
+                </li>
+                <li class="JQ-magnify">
+                    <a href="./works/JQuery/JQ放大镜/jQ放大镜.html" target="_blink">JQ放大镜</a>
+                </li>
+                <li class="JQ-banner">
+                    <a href="./works/JQuery/JQ封装轮播图/封装轮播图.html" target="_blink">封装轮播图</a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+
+</body>
+
+</html>
